@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>The Amazing Chat</h1>
+
+        <div class="content">
+            <form id="add-message-form">
+                <input type="text" name="name" placeholder="Your name (will be visible)">
+                <input type="text" name="message" placeholder="Your message">
+                <button>Send message</button>
+            </form>
+            
+
+            <ul id="message-list"></ul>
+
+            
+
+        </div>
+        
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#config-web-app -->
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyDPsx3FmI7mf9z9nBBcsiPCKqrb1Vfn6es",
+                authDomain: "opgavetilmorten.firebaseapp.com",
+                databaseURL: "https://opgavetilmorten.firebaseio.com",
+                projectId: "opgavetilmorten",
+                storageBucket: "opgavetilmorten.appspot.com",
+                messagingSenderId: "939881505555",
+                appId: "1:939881505555:web:93b246d12177659b"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+        </script>
+
+        <script src="app.js"></script>
+    </body>
+</html>

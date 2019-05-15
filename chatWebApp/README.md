@@ -1,0 +1,1 @@
+Link to running version deployed using firebase hosting: https://opgavetilmorten.firebaseapp.com
