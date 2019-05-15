@@ -22,7 +22,7 @@ function renderMessage(doc){
 db.collection('chatMessages').orderBy('created', 'desc').get().then((snapshot) => {
     
     snapshot.docs.forEach(doc => {
-        renderCafe(doc);
+        renderMessage(doc);
     });
 })
 
@@ -36,7 +36,7 @@ form.addEventListener('submit',(e) => {
     }).then(db.collection('chatMessages').orderBy('created', 'desc').get().then((snapshot) => {
         messagelist.innerHTML = "";
         snapshot.docs.forEach(doc => {
-            renderCafe(doc);
+            renderMessage(doc);
         });
     }));
     form.name.value = '';

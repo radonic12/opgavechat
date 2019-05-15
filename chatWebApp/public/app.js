@@ -1,7 +1,7 @@
 const messagelist = document.querySelector("#message-list")
 const form = document.querySelector("#add-message-form")
 
-// create element and render cafe
+// create element and render message
 function renderMessage(doc){
     
     let li = document.createElement('li');
@@ -22,7 +22,7 @@ function renderMessage(doc){
 db.collection('chatMessages').orderBy('created', 'desc').get().then((snapshot) => {
     
     snapshot.docs.forEach(doc => {
-        renderCafe(doc);
+        renderMessage(doc);
     });
 })
 
@@ -36,7 +36,7 @@ form.addEventListener('submit',(e) => {
     }).then(db.collection('chatMessages').orderBy('created', 'desc').get().then((snapshot) => {
         messagelist.innerHTML = "";
         snapshot.docs.forEach(doc => {
-            renderCafe(doc);
+            renderMessage(doc);
         });
     }));
     form.name.value = '';
